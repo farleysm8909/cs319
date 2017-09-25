@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quiz 04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function getAnswer() {
+                var answer;
+                
+                answer = document.question.animal.value;
+                
+                alert(answer);
+            }
+        </script>
+        <form name="question" id="animalForm" action="#" method="get">
+            <p>What is your favorite animal? <input type="text" name="animal" id="animalResponse"></p><br>
+            <input type="button" name="submit" id="allDone" value="Submit" onclick="getAnswer();">
+        </form> 
+        
+    </body>
+</html>
