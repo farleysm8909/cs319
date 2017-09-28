@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Temperature Converter</h1>
+        <script>
+            function getTempC() {
+                var f;
+                var c;
+                
+                f = parseFloat(document.temp.degreesF.value);
+                
+                c = (f - 32) * (5/9);
+                
+                document.temp.degreesC.value = c;
+                document.temp.degreesC.style.backgroundColor = "lightGreen";
+            }
+            function getTempF() {
+                var f;
+                var c;
+                
+                c = parseFloat(document.temp.degreesC.value);
+                
+                f = (c * (9/5)) + 32;
+                
+                document.temp.degreesF.value = f;
+                document.temp.degreesF.style.backgroundColor = "lightGreen";
+            }
+        </script>
+        <form name="temp" id="temp" action="#" method="get">
+            <p>Temperature in Fahrenheit:<br><input type="number" name="degreesF" id="degreesF"></p>
+            <input type="button" name="toC" id="toC" value="F to C" onclick="getTempC();">
+            <input type="button" name="toF" id="toF" value="C to F" onclick="getTempF();">
+            <p>Temperature in Celsius:<br><input type="number" name="degreesC" id="degreesC"></p>
+        </form>
+    </body>
+</html>
