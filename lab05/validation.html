@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Lab 05</title>
+        <title>Lab 05 Task 1</title>
         <meta charset="utf-8">
     </head>
     <body>
@@ -14,20 +14,18 @@
                 
                 if (firstName == "") {
                     return false;
-                } else {
-                    return true;
-                }if (lastName == "") {
-                    return false;
-                } else {
-                    return true;
-                }if (email == "") {
-                    return false; 
-                } else {
-                    return true;
                 }
+                if (lastName == "") {
+                    return false;
+                } 
+                if (email == "") {
+                    return false; 
+                }
+                    return true;
             }
+            
         </script>
-        <form name="info" id="info" action="#" method="get" onsubmit="return formValidate();">
+        <form name="info" id="info" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
             <p>First Name: <input type="text" name="firstName" id="firstName"></p>
             <p>Last Name: <input type="text" name="lastName" id="lastName"></p>
             <p>E-mail Address: <input type="text" name="email" id="email"></p>
