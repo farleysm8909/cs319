@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 05</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function formValidate() {
+                //alert("I hope this works!");
+                var firstName = document.info.firstName.value;
+                var lastName = document.info.firstName.value;
+                var email = document.info.email.value;
+                
+                if (firstName == "") {
+                    return false;
+                } else {
+                    return true;
+                }if (lastName == "") {
+                    return false;
+                } else {
+                    return true;
+                }if (email == "") {
+                    return false; 
+                } else {
+                    return true;
+                }
+            }
+        </script>
+        <form name="info" id="info" action="#" method="get" onsubmit="return formValidate();">
+            <p>First Name: <input type="text" name="firstName" id="firstName"></p>
+            <p>Last Name: <input type="text" name="lastName" id="lastName"></p>
+            <p>E-mail Address: <input type="text" name="email" id="email"></p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </form>
+    </body>
+</html>
