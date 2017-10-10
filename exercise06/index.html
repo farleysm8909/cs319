@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 06</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Guess the Number!</h1>
+        <script>
+            function calculate() {
+                var myNumber = 4;
+                var theirNumber;
+                theirNumber = document.guess.number.value;
+                theirNumber = theirNumber.trim();
+                
+                if (theirNumber == "") {
+                    alert("Error, please enter a number.");
+                    document.guess.number.focus();
+                    return false;
+                } else if (isNaN(theirNumber) == true) {
+                    alert("Please enter a number.");
+                    document.guess.number.select();
+                    return false;
+                } else if (theirNumber < 1 || theirNumber > 10) {
+                    alert("Please enter a number between 1 and 10.");
+                    document.guess.number.select();
+                    return false;
+                } else if (theirNumber > myNumber) {
+                    alert("Your guess is too high. But you're getting closer, I can feel it!");
+                    document.guess.number.select();
+                    return false;
+                } else if (theirNumber < myNumber) {
+                    alert("Your guess is too low. But you're getting closer, I can feel it!");
+                    document.guess.number.select();
+                    return false;
+                } else if (theirNumber == myNumber) {
+                    alert("Congratulations! You guessed the correct number. Virtual high-five.");
+                    return true;
+                }
+            }
+        </script>
+        <form name="guess" id="guess" action="#" method="get" onsubmit="return calculate();">
+            <p>Your Guess: <input type="text" name="number" id="number"></p><br>
+            <input type="submit" id="submit" name="submit" value="Submit">
+        </form>
+    </body>
+</html>
