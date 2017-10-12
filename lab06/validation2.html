@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 05 Task 1</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function formValidate() {
+                //alert("I hope this works!");
+                var firstName = document.info.firstName.value;
+                var lastName = document.info.firstName.value;
+                var email = document.info.email.value;
+                var age = document.info.age.value;
+                
+                if (firstName == "") {
+                    return false;
+                }
+                else if (lastName == "") {
+                    return false;
+                } 
+                else if (email.endsWith("@uwec.edu") == false) {
+                    return false; 
+                } 
+                else if (age == "") {
+                    document.info.age.focus();
+                    return false;
+                } 
+                else if (isNaN(age) == true) {
+                    document.info.age.focus();
+                    return false;       
+                } 
+                else if (age < 18 == true) {
+                    document.info.age.focus();
+                    return false;
+                }
+                else {
+                   return true; 
+                }       
+            }
+        </script>
+        <form name="info" id="info" action="#" method="get" onsubmit="return formValidate();">
+            <p>First Name: <input type="text" name="firstName" id="firstName"></p>
+            <p>Last Name: <input type="text" name="lastName" id="lastName"></p>
+            <p>E-mail Address: <input type="text" name="email" id="email"></p>
+            <p>Age: <input type="text" name="age" id="age"></p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </form>
+    </body>
+</html>
